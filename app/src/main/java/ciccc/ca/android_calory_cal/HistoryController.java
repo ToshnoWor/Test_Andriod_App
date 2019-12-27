@@ -108,7 +108,7 @@ public class HistoryController extends AppCompatActivity {
 
                     if(currentWeight>targetWeight && sumOfCalories >=0){
                         //setting current date
-                        calendar.set(2018, 6, 26);
+                        calendar.set(today.getYear()+1900, 1+today.getMonth(), today.getDate());
                     }
                 }
 
@@ -122,7 +122,7 @@ public class HistoryController extends AppCompatActivity {
 
 
         //setting current date
-        calendar.set(2018, 6, 20);
+        calendar.set(today.getYear()+1900, today.getMonth(), today.getDate());
 
         calendarView.setDate(calendar);
 
