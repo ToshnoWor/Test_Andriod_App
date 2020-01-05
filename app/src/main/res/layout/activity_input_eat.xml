@@ -1,97 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".InputEat"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/regularPad"
         android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/regularPad"
         android:text="Record"
         android:textColor="@color/colorPrimaryOff"
         android:textSize="@dimen/largeText"
-        android:gravity="center" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/wrapPad"
-        android:orientation="vertical">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <TextView
             android:id="@+id/reading"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Food : "
-            android:textSize="@dimen/regularText"/>
+            android:textSize="@dimen/regularText"
+            app:layout_constraintTop_toBottomOf="@+id/reading"
+            tools:layout_editor_absoluteX="-16dp" />
 
         <EditText
             android:id="@+id/foodName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            tools:layout_editor_absoluteX="-16dp" />
 
         <TextView
+            android:id="@+id/textView15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/calories_per_100g"
-            android:textSize="@dimen/regularText"/>
+            android:textSize="@dimen/regularText"
+            app:layout_constraintTop_toBottomOf="@+id/foodName"
+            tools:layout_editor_absoluteX="-25dp" />
 
         <EditText
             android:id="@+id/caloriesPerGram"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <Button
+            android:id="@+id/button14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
+            android:onClick="addToList"
             android:text="add"
             android:textColor="@color/colorPrimaryOff"
-            android:onClick="addToList"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout23"
+        android:layout_width="410dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:gravity="bottom">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
+            android:id="@+id/imageButton22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryOff"
             android:onClick="goToOverview"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
             android:padding="@dimen/regularPad"
-            android:background="@color/colorPrimaryOff"
-            android:src="@drawable/ico_overview"/>
+            android:src="@drawable/ico_overview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton23"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:onClick="goToRecord"
-            android:layout_width="130dp"
+            android:id="@+id/imageButton23"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="@dimen/regularPad"
             android:background="@color/colorPrimary"
-            android:src="@drawable/ico_record_wh"/>
+            android:onClick="goToRecord"
+            android:padding="@dimen/regularPad"
+            android:src="@drawable/ico_record_wh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton24"
+            app:layout_constraintStart_toEndOf="@+id/imageButton22"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageButton
-            android:onClick="goToHistory"
-            android:layout_width="130dp"
+            android:id="@+id/imageButton24"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="@dimen/regularPad"
             android:background="@color/colorPrimaryOff"
-            android:src="@drawable/ico_history"/>
-
-    </LinearLayout>
-
-</LinearLayout>
+            android:onClick="goToHistory"
+            android:padding="@dimen/regularPad"
+            android:src="@drawable/ico_history"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton23"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

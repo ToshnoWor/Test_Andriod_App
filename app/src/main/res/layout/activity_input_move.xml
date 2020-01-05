@@ -1,97 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".InputMove"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textView17"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/regularPad"
         android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/regularPad"
         android:text="@string/record"
         android:textColor="@color/colorPrimaryOff"
         android:textSize="@dimen/largeText"
-        android:gravity="center" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/wrapPad"
-        android:orientation="vertical">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17">
 
         <TextView
             android:id="@+id/reading"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/exercise"
-            android:textSize="@dimen/regularText" />
+            android:textSize="@dimen/regularText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reading" />
 
         <EditText
             android:id="@+id/exerciseName_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
         <TextView
+            android:id="@+id/textView19"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lost calories / hour"
-            android:textSize="@dimen/regularText" />
+            android:textSize="@dimen/regularText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exerciseName_et" />
 
         <EditText
             android:id="@+id/exerciseCaloriesLost_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
         <Button
+            android:id="@+id/button15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
+            android:onClick="addToList"
             android:text="add"
             android:textColor="@color/colorPrimaryOff"
-            android:onClick="addToList"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="bottom"
-        android:gravity="bottom">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout24"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:layout_width="130dp"
+            android:id="@+id/imageButton19"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryOff"
             android:onClick="goToOverview"
             android:padding="@dimen/regularPad"
-            android:src="@drawable/ico_overview" />
+            android:src="@drawable/ico_overview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:onClick="goToRecord"
-            android:layout_width="130dp"
+            android:id="@+id/imageButton20"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="@dimen/regularPad"
             android:background="@color/colorPrimary"
-            android:src="@drawable/ico_record_wh"/>
+            android:onClick="goToRecord"
+            android:padding="@dimen/regularPad"
+            android:src="@drawable/ico_record_wh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton21"
+            app:layout_constraintStart_toEndOf="@+id/imageButton19"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:onClick="goToHistory"
-            android:layout_width="130dp"
+            android:id="@+id/imageButton21"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="@dimen/regularPad"
             android:background="@color/colorPrimaryOff"
-            android:src="@drawable/ico_history"/>
-
-    </LinearLayout>
-
-</LinearLayout>
+            android:onClick="goToHistory"
+            android:padding="@dimen/regularPad"
+            android:src="@drawable/ico_history"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton20"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
