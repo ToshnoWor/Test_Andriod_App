@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InputMove"
+    tools:context=".CalculateMoveCalories"
     android:orientation="vertical">
 
     <TextView
@@ -13,7 +12,7 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/regularPad"
         android:background="@color/colorPrimary"
-        android:text="@string/record"
+        android:text="Record"
         android:textColor="@color/colorPrimaryOff"
         android:textSize="@dimen/largeText"
         android:gravity="center" />
@@ -21,43 +20,73 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/wrapPad"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/wrapPad">
 
         <TextView
-            android:id="@+id/reading"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/clickedItem"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/exercise"
-            android:textSize="@dimen/regularText" />
+            android:textSize="@dimen/largeText"
+            android:text="item"/>
 
-        <EditText
-            android:id="@+id/exerciseName_et"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20sp"
+            android:text="×"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/gram"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:hint="hours "
+                android:inputType="number" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="20sp"
+            android:text="= "
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tatalcalories"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lost calories / hour"
-            android:textSize="@dimen/regularText" />
+            android:textSize="@dimen/largeText"
+            android:text="calories"/>
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/exerciseCaloriesLost_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/wrapPad">
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="add"
+            android:text="@string/_1_calculate"
             android:textColor="@color/colorPrimaryOff"
-            android:onClick="addToList"/>
+            android:onClick="calculateTotal"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/_2_add_to_histry"
+            android:textColor="@color/colorPrimaryOff"
+            android:onClick="addToHistory"/>
 
     </LinearLayout>
 
@@ -69,12 +98,12 @@
         android:gravity="bottom">
 
         <ImageButton
+            android:onClick="goToOverview"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryOff"
-            android:onClick="goToOverview"
             android:padding="@dimen/regularPad"
-            android:src="@drawable/ico_overview" />
+            android:background="@color/colorPrimaryOff"
+            android:src="@drawable/ico_overview"/>
 
         <ImageButton
             android:onClick="goToRecord"

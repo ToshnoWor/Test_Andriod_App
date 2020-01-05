@@ -117,7 +117,7 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout7"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +126,7 @@
         <ImageButton
             android:id="@+id/imageButton4"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:background="@color/colorPrimaryOff"
             android:onClick="goToOverview"
@@ -140,7 +140,7 @@
         <ImageButton
             android:id="@+id/imageButton5"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:background="@color/colorPrimary"
             android:padding="@dimen/regularPad"
@@ -153,7 +153,7 @@
         <ImageButton
             android:id="@+id/imageButton6"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:background="@color/colorPrimaryOff"
             android:onClick="goToHistory"
