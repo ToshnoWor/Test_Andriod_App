@@ -1,90 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HistoryController"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textView20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/regularPad"
         android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/regularPad"
         android:text="@string/history"
         android:textColor="@color/colorPrimaryOff"
         android:textSize="@dimen/largeText"
         android:textStyle="bold"
-        android:gravity="center" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout26"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:padding="@dimen/regularPad"
-        android:orientation="vertical">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20">
 
         <Button
             android:id="@+id/choosedate"
-            android:onClick="chooseDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
+            android:onClick="chooseDate"
             android:text="@string/choose_date"
+            android:textAllCaps="false"
             android:textColor="@color/colorPrimaryOff"
-            android:textAllCaps="false" />
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/selectedDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
             android:gravity="center"
+            android:paddingTop="20dp"
+            android:textColor="@color/colorPrimary"
             android:textSize="40sp"
             android:textStyle="bold"
-            android:textColor="@color/colorPrimary" />
-
-    </LinearLayout>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choosedate" />
+    </android.support.constraint.ConstraintLayout>
 
     <ListView
         android:id="@+id/historyListView"
         android:layout_width="match_parent"
-        android:layout_height="451dp"></ListView>
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout26"></ListView>
 
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout25"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:gravity="bottom">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
+            android:id="@+id/imageButton16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:background="@color/colorPrimaryOff"
             android:onClick="goToOverview"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.3"
             android:padding="@dimen/regularPad"
-            android:background="@color/colorPrimaryOff"
-            android:src="@drawable/ico_overview" />
+            android:src="@drawable/ico_overview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
+            android:id="@+id/imageButton17"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
-            android:padding="@dimen/regularPad"
+            android:background="@color/colorPrimaryOff"
             android:onClick="goToRecord"
-            android:background="@color/colorPrimaryOff"
-            android:src="@drawable/ico_record" />
+            android:padding="@dimen/regularPad"
+            android:src="@drawable/ico_record"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton18"
+            app:layout_constraintStart_toEndOf="@+id/imageButton16"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
+            android:id="@+id/imageButton18"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
-            android:padding="@dimen/regularPad"
             android:background="@color/colorPrimary"
-            android:src="@drawable/ico_history_wh" />
-
-    </LinearLayout>
-
-</LinearLayout>
+            android:padding="@dimen/regularPad"
+            android:src="@drawable/ico_history_wh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton17"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
