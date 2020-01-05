@@ -50,8 +50,7 @@
     <ListView
         android:id="@+id/historyListView"
         android:layout_width="match_parent"
-        android:layout_height="230dp">
-    </ListView>
+        android:layout_height="451dp"></ListView>
 
     <LinearLayout
         android:layout_weight="1"
