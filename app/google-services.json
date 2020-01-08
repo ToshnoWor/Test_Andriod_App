@@ -1,52 +1,45 @@
 {
   "project_info": {
-    "project_number": "454421032578",
-    "firebase_url": "https://androidcalorycal.firebaseio.com",
-    "project_id": "androidcalorycal",
-    "storage_bucket": "androidcalorycal.appspot.com"
+    "project_number": "1052165952441",
+    "firebase_url": "https://caloriescounter-99508.firebaseio.com",
+    "project_id": "caloriescounter-99508",
+    "storage_bucket": "caloriescounter-99508.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:454421032578:android:2072047eb4c41f42",
+        "mobilesdk_app_id": "1:1052165952441:android:a825ae5ff0d7b445a3dc68",
         "android_client_info": {
           "package_name": "ciccc.ca.android_calory_cal"
         }
       },
       "oauth_client": [
         {
-          "client_id": "454421032578-e6icbqch7m65gmrako2f08i98s2fp9gq.apps.googleusercontent.com",
+          "client_id": "1052165952441-g00itldvalhrs3orvfqij5bc3onu92jh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "ciccc.ca.android_calory_cal",
-            "certificate_hash": "1d5b3058f417162ebb221134ed705c22a20b363a"
+            "certificate_hash": "9ad1374436d199604a82d3bfcc811e0a48bee84d"
           }
         },
         {
-          "client_id": "454421032578-cfiiv5ht887un4mjf522gb4oja5jetkg.apps.googleusercontent.com",
+          "client_id": "1052165952441-s21umcuve0ui9l0t59bt9to5j5ieme5f.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB_sxE3utqsaPxfnYuB3GiIvQnKbQ1GH5Y"
+          "current_key": "AIzaSyCLBJO9JQKsPc0Yb5cv1M0adIQFDJqNdO0"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "454421032578-cfiiv5ht887un4mjf522gb4oja5jetkg.apps.googleusercontent.com",
+              "client_id": "1052165952441-s21umcuve0ui9l0t59bt9to5j5ieme5f.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }
